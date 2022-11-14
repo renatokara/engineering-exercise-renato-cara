@@ -1,6 +1,11 @@
 
 ## Renato Cara Engineering Exercise 
+## Retrieving the code
+```bash
+git clone https://github.com/renatokara/engineering-exercise-renato-cara.git
 
+cd engineering-exercise-renato-cara
+```
 
 ## Running the demo
 ### Running with docker
