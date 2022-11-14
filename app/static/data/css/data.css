@@ -1,0 +1,83 @@
+.main-container {
+    max-width: 918px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#data-list-filter {
+
+    
+}
+
+
+fieldset {
+    border-radius: 5px;
+
+}
+.buttons-div {
+    display: flex;
+    min-height: 50px;
+    justify-content: end;
+    align-items: center;
+}
+
+.button-form {
+    justify-content: space-evenly;
+}
+
+.buttons-div input[type=button] {
+    height: 35px;
+    min-width: 60px;
+    border-radius: 3px;
+    background-color: dodgerblue;
+    color: white;
+    border-color: transparent;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.field-line {
+    margin-top: 15px;
+}
+
+.field-line label {
+    min-width: 80px;
+    display: inline-block;
+    text-align: right;
+    margin-right: 3px;
+}
+.field-line input:invalid {
+    background-color: pink;
+}
+
+#data-list-tab {
+    width: 100%;
+    min-width: 910px;
+    border: none;
+}
+#data-list-tab th {
+    background-color: rgb(187, 187, 187);
+    padding: 5px;
+}
+
+#data-list-tab tr {
+    background-color: rgb(221, 237, 252);
+}
+#data-list-tab tr td{ 
+    border: none;
+    padding: 5px;
+}
+#data-list-tab tr:nth-child(even) {
+    background-color: rgb(181, 199, 214);
+}
+
+#textarea-batch {
+    width: 800px;
+    min-height: 800px;
+}

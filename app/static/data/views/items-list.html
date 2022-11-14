@@ -1,0 +1,133 @@
+<html>
+  <head>
+    <script src="static/data/js/data.js"></script>
+    <link rel="stylesheet" href="static/data/css/data.css" type="text/css" />
+  </head>
+  <body onload="init()">
+    <div class="main-container">
+        <div id="data-list">
+          <div id="data-list-filter">
+            <fieldset>
+                <legend>Filter</legend>
+                <div id="data-list-filter-body">
+                    <div class="field-line">
+                    <label for="filter-title">Title</label>
+                    <input type="text" id="filter-title" placeholder="Title" />
+                    </div>
+                    <div class="field-line">
+                    <label for="filter-url">URL</label>
+                    <input type="text" id="filter-url" placeholder="URI" />
+                    </div>
+                    <div class="field-line">
+                    <label for="filter-after">After</label>
+                    <input
+                        type="datetime-local"
+                        id="filter-after"
+                        placeholder="Title"
+                    />
+                    <label for="filter-before">Before</label>
+                    <input
+                        type="datetime-local"
+                        id="filter-before"
+                        placeholder="Title"
+                    />
+                    </div>
+                    <div class="buttons-div">
+                        <input
+                            type="button"
+                            id="search"
+                            value="Search"
+                            onclick="search()"
+                        />
+                    </div>
+                </div>
+            </fieldset>
+            <div>
+                <div>
+                    <div class="buttons-div">
+                        <input
+                        type="button"
+                        value="Load data from data.json"
+                        id="loadData"
+                        onclick="openBatcher()"
+                      />
+                      <input
+                        type="button"
+                        value="Add new"
+                        id="new"
+                        onclick="newItem()"
+                      />
+                    </div>
+                  </div>
+            </div>
+            <table id="data-list-tab">
+                <thead>
+                    <tr>
+                    <th>Id</th>
+                    <th>URL</th>
+                    <th>Title</th>
+                    <th>Date added</th>
+                    <th></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+          </div>
+        </div>
+        <div id="data-form">
+            <input type="hidden" id="form-id" />
+            <fieldset>
+              <legend>Data form</legend>
+              <div id="data-form-filter-body">
+                <div class="field-line">
+                  <label for="form-title">Title</label>
+                  <input
+                    required="true"
+                    maxlength="100"
+                    type="text"
+                    id="form-title"
+                    placeholder="Title"
+                  />
+                </div>
+                <div class="field-line">
+                  <label for="form-url">URL</label>
+                  <input
+                    required="true"
+                    maxlength="255"
+                    type="url"
+                    id="form-url"
+                    placeholder="URI"
+                  />
+                </div>
+                <div class="field-line">
+                  <label for="form-after">Date</label>
+                  <input
+                    required="true"
+                    type="datetime-local"
+                    id="form-date"
+                    placeholder="Date"
+                  />
+                </div>
+                <div class="buttons-div button-form">
+                  <input type="button" id="cancel" value="Cancel" />
+                  <input type="button" id="save" value="Save" />
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div id="data-batcher">
+              <div class="field-line">
+                  <label for="textarea-batch">Import the data from Data.json</label>
+                  <textarea id="textarea-batch">
+  
+                  </textarea>
+              </div>
+              <div id="data-batchner-output"></div>
+              <div class="buttons-div button-form">
+                  <input type="button" id="cancel-batch" value="Back" onclick="cancel()" />
+                  <input type="button" id="import" value="import" onclick="insertBatch()" />
+                </div>
+          </div>
+    </div>
+  </body>
+</html>

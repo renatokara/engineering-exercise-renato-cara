@@ -1,3 +1,4 @@
+
 CREATE TABLE data (
     id int(11) not null primary key auto_increment,
     url varchar(255) not null,
